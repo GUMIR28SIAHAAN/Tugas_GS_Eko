@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rancangan Pembelajaran Ekonomi Kelas XII – AAS Ganjil + Kuis 40 Soal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #f0f4fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 30px 35px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0a2e5c;
+            border-left: 10px solid #f59e0b;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            color: #4a5b6e;
+            margin-bottom: 30px;
+            font-weight: 400;
+            padding-left: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #0a2e5c;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-right: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0a2e5c;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 3px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        h2 .icon {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3b5c;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            padding-left: 8px;
+            border-left: 5px solid #f59e0b;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d4a6b;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        .card {
+            background: #f9fcff;
+            border-radius: 24px;
+            padding: 24px 28px;
+            margin-bottom: 30px;
+            border: 1px solid #dbe7f2;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .dialog {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            border-left: 6px solid #3b82f6;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .dialog .guru {
+            color: #1e40af;
+            font-weight: 700;
+        }
+
+        .dialog .siswa {
+            color: #b45309;
+            font-weight: 700;
+        }
+
+        .dialog p {
+            margin: 8px 0;
+        }
+
+        .pid {
+            background: #0a2e5c;
+            color: #f1f5f9;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 16px;
+            border: 1px solid #dbe7f2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background: white;
+        }
+
+        th {
+            background: #0a2e5c;
+            color: white;
+            font-weight: 600;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 800px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .challenge-box {
+            background: linear-gradient(135deg, #0a2e5c 0%, #1e4b7a 100%);
+            color: white;
+            border-radius: 24px;
+            padding: 28px 32px;
+            margin: 20px 0;
+        }
+
+        .challenge-box h3 {
+            color: #fde68a;
+            border-left-color: #fde68a;
+            margin-top: 0;
+        }
+
+        .challenge-box .card-inner {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            backdrop-filter: blur(4px);
+        }
+
+        .reflection {
+            background: #f3e8ff;
+            border-radius: 24px;
+            padding: 28px 32px;
+            margin: 30px 0;
+            border: 1px solid #d8b4fe;
+        }
+
+        .reflection h3 {
+            border-left-color: #8b5cf6;
+            color: #4c1d95;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #1e293b;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        .tag-c2 { background: #dbeafe; color: #1e40af; }
+        .tag-c3 { background: #dcfce7; color: #166534; }
+        .tag-c4 { background: #fef9c3; color: #854d0e; }
+        .tag-c5 { background: #ffe4e6; color: #9f1239; }
+
+        ul, ol {
+            padding-left: 24px;
+            margin: 10px 0;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        .infographic {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 16px 0;
+        }
+
+        .info-box {
+            background: white;
+            border-radius: 16px;
+            padding: 16px 20px;
+            flex: 1;
+            min-width: 200px;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .info-box h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0a2e5c;
+            margin-bottom: 6px;
+        }
+
+        .info-box p {
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px dashed #cbd5e1;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .interactive-area {
+            background: #eef2ff;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 16px 0;
+            border: 2px dashed #6366f1;
+        }
+
+        .small-note {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 6px;
+        }
+
+        /* ===== KUIS INTERAKTIF ===== */
+        .quiz-section {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 28px 30px;
+            margin-top: 20px;
+            border: 2px solid #0a2e5c;
+            box-shadow: 0 8px 24px rgba(10, 46, 92, 0.12);
+            position: relative;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 2px dashed #cbd5e1;
+        }
+
+        .quiz-header h3 {
+            margin: 0;
+            border-left: none;
+            padding-left: 0;
+            font-size: 1.6rem;
+            color: #0a2e5c;
+        }
+
+        .score-panel {
+            background: #0a2e5c;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 12px rgba(10, 46, 92, 0.3);
+        }
+
+        .score-panel span {
+            color: #fde68a;
+            font-size: 1.4rem;
+        }
+
+        .progress-bar-wrap {
+            width: 100%;
+            height: 12px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #f59e0b, #10b981);
+            border-radius: 20px;
+            transition: width 0.4s ease;
+        }
+
+        /* ===== INTRO SCREEN KUIS ===== */
+        .quiz-intro {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 46, 92, 0.97);
+            border-radius: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            z-index: 20;
+            backdrop-filter: blur(4px);
+            color: white;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .quiz-intro.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .quiz-intro .mascot {
+            font-size: 5rem;
+            animation: bounceMascot 1.6s infinite ease-in-out;
+            margin-bottom: 10px;
+        }
+
+        @keyframes bounceMascot {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-14px); }
+        }
+
+        .quiz-intro h3 {
+            font-size: 2rem;
+            color: #fde68a;
+            border: none;
+            padding: 0;
+            margin: 10px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .quiz-intro p {
+            font-size: 1.1rem;
+            max-width: 720px;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .quiz-intro .rules {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 14px 22px;
+            margin: 12px 0 20px;
+            font-size: 0.95rem;
+            text-align: left;
+            max-width: 720px;
+        }
+
+        .quiz-intro .rules li {
+            margin: 6px 0;
+            color: #e2e8f0;
+        }
+
+        .countdown-big {
+            font-size: 5rem;
+            font-weight: 800;
+            color: #fde68a;
+            margin: 10px 0;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 0 30px rgba(253, 230, 138, 0.5);
+        }
+
+        .countdown-big .num {
+            animation: pulseNum 1s infinite ease-in-out;
+        }
+
+        @keyframes pulseNum {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.85; }
+        }
+
+        .start-btn {
+            background: #f59e0b;
+            color: #0a2e5c;
+            font-weight: 800;
+            font-size: 1.2rem;
+            padding: 16px 44px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 10px 24px rgba(245, 158, 11, 0.4);
+        }
+
+        .start-btn:hover {
+            background: #fbbf24;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 32px rgba(245, 158, 11, 0.55);
+        }
+
+        .start-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* ===== KARTU SOAL ===== */
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 20px;
+        }
+
+        .q-card {
+            background: #f9fcff;
+            border-radius: 20px;
+            padding: 20px 22px;
+            border: 1px solid #dbe7f2;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: 0.25s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .q-card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .q-card .q-number {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .q-card .q-text {
+            font-weight: 600;
+            color: #0a2e5c;
+            margin-bottom: 12px;
+            font-size: 0.98rem;
+            line-height: 1.5;
+        }
+
+        .q-card .options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .option-btn {
+            background: white;
+            border: 2px solid #dbe7f2;
+            border-radius: 12px;
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: 0.18s;
+            color: #1e293b;
+            font-family: inherit;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .option-btn:hover:not(:disabled) {
+            border-color: #3b82f6;
+            background: #eff6ff;
+            transform: translateX(3px);
+        }
+
+        .option-btn .opt-label {
+            font-weight: 700;
+            color: #0a2e5c;
+            min-width: 22px;
+        }
+
+        .option-btn.selected {
+            border-color: #3b82f6;
+            background: #dbeafe;
+            animation: shakeSmall 0.25s;
+        }
+
+        @keyframes shakeSmall {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            75% { transform: translateX(3px); }
+        }
+
+        .option-btn.correct {
+            border-color: #10b981;
+            background: #d1fae5;
+            color: #065f46;
+            animation: popCorrect 0.4s ease;
+        }
+
+        @keyframes popCorrect {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .option-btn.correct .opt-label {
+            color: #065f46;
+        }
+
+        .option-btn.wrong {
+            border-color: #ef4444;
+            background: #fee2e2;
+            color: #991b1b;
+            animation: popWrong 0.4s ease;
+        }
+
+        @keyframes popWrong {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-5px); }
+            40% { transform: translateX(5px); }
+            60% { transform: translateX(-4px); }
+            80% { transform: translateX(4px); }
+        }
+
+        .option-btn.wrong .opt-label {
+            color: #991b1b;
+        }
+
+        .option-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.9;
+        }
+
+        /* ===== FEEDBACK INTERAKTIF ===== */
+        .feedback {
+            font-size: 0.88rem;
+            border-radius: 12px;
+            padding: 0;
+            margin-top: auto;
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .feedback.show {
+            display: block;
+            animation: slideFeedback 0.4s ease;
+        }
+
+        @keyframes slideFeedback {
+            0% { transform: translateY(10px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .feedback-inner {
+            padding: 12px 16px;
+        }
+
+        .feedback.ok {
+            background: #ecfdf5;
+            border-left: 5px solid #10b981;
+        }
+
+        .feedback.no {
+            background: #fef2f2;
+            border-left: 5px solid #ef4444;
+        }
+
+        .feedback .fb-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .feedback.ok .fb-header { color: #065f46; }
+        .feedback.no .fb-header { color: #991b1b; }
+
+        .feedback .fb-emoji {
+            font-size: 1.6rem;
+            animation: popEmoji 0.5s ease;
+        }
+
+        @keyframes popEmoji {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.25); }
+            100% { transform: scale(1); }
+        }
+
+        .feedback .fb-explain {
+            color: #334155;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .feedback .fb-explain strong {
+            color: #0a2e5c;
+        }
+
+        .feedback .fb-badge {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: 20px;
+            background: #0a2e5c;
+            color: #fde68a;
+        }
+
+        .feedback .next-hint {
+            margin-top: 8px;
+            font-size: 0.8rem;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .quiz-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 2px dashed #cbd5e1;
+        }
+
+        .btn {
+            border: none;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: #0a2e5c;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1e4b7a;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: white;
+            color: #0a2e5c;
+            border: 2px solid #0a2e5c;
+        }
+
+        .btn-outline:hover {
+            background: #eff6ff;
+        }
+
+        .btn-success {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .result-banner {
+            display: none;
+            background: linear-gradient(135deg, #0a2e5c 0%, #1e4b7a 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 24px 28px;
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .result-banner.show {
+            display: block;
+            animation: popIn 0.4s ease;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.95); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .result-banner h4 {
+            color: #fde68a;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        .result-banner .big-score {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fde68a;
+        }
+
+        .result-banner p {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #0a2e5c;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            z-index: 999;
+            opacity: 0;
+            transition: 0.4s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 90vw;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast .toast-emoji {
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📘 Rancangan Pembelajaran Ekonomi Kelas XII</h1>
+    <div class="subhead">
+        <span class="badge">AAS Ganjil</span>
+        <span class="badge">Interactive PID</span>
+        <span class="badge">Kuis 40 Soal Interaktif</span>
+    </div>
+
+    <!-- ======================= A. PEMBUKAAN ======================= -->
+    <h2><span class="icon">🎯</span> A. Pembukaan Menarik & Interaktif (5–10 Menit)</h2>
+    <div class="card" style="background: linear-gradient(135deg, #fef3c7 0%, #f0f4fa 100%); border: 2px solid #f59e0b;">
+        <div class="dialog" style="border-left-color: #f59e0b;">
+            <p><span class="guru">Guru (menampilkan slide PID “Misi Ekonomi Hari Ini”):</span> “Selamat pagi, para calon pengusaha dan wajib pajak teladan! 🎉 Hari ini kita akan memulai petualangan ekonomi. Sebelum masuk materi, kita lakukan <strong>‘Tebak 3 Gambar’</strong> dulu, ya!”</p>
+        </div>
+
+        <h3 style="border-left-color: #f59e0b;">🎮 Game Pembuka: “Apa Hubungannya?”</h3>
+        <p><span class="pid">PID</span> Tampilkan 3 gambar sekaligus: (1) struk belanja minimarket, (2) slip gaji karyawan, (3) surat PBB rumah.</p>
+
+        <div class="interactive-area" style="background: #fff7ed; border-color: #f59e0b;">
+            <p><strong>Aturan main:</strong> Siswa mengamati 3 gambar di PID selama 30 detik, lalu menuliskan 1 kata kunci yang menghubungkan ketiganya di kertas kecil/sticky note. Guru meminta 3–5 siswa membacakan jawabannya.</p>
+            <p><span class="guru">Guru:</span> “Coba tebak, apa benang merah dari struk belanja, slip gaji, dan surat PBB?”</p>
+            <p><span class="siswa">Siswa (contoh jawaban):</span> “Uang, Bu!” / “Transaksi!” / “Pajak!” / “Bisnis!”</p>
+            <p><span class="guru">Guru:</span> “Hebat! Jawaban kalian mengarah ke satu kata kunci: <strong>EKONOMI</strong>. Hari ini kita akan mengupas tuntas dari transaksi usaha sampai kewajiban pajak — siap untuk tantangan?”</p>
+            <p><span class="siswa">Siswa (serentak):</span> “Siap, Bu/Pak!”</p>
+        </div>
+
+        <h3 style="border-left-color: #f59e0b;">⚡ Mini Ice Breaker: “Ekonomi atau Bukan?”</h3>
+        <p><span class="pid">PID</span> Tampilkan 5 pernyataan; siswa angkat tangan jika itu kegiatan ekonomi, dan silang tangan jika bukan.</p>
+        <div class="grid-2">
+            <div class="info-box" style="border-color: #f59e0b;"><h5>1. Membeli bakso di kantin</h5><p>✅ Kegiatan ekonomi (konsumsi).</p></div>
+            <div class="info-box" style="border-color: #f59e0b;"><h5>2. Menonton drama Korea</h5><p>❌ Bukan kegiatan ekonomi produktif.</p></div>
+            <div class="info-box" style="border-color: #f59e0b;"><h5>3. Membayar pajak kendaraan</h5><p>✅ Kewajiban ekonomi (pajak).</p></div>
+            <div class="info-box" style="border-color: #f59e0b;"><h5>4. Membuka usaha les privat</h5><p>✅ Kegiatan ekonomi (produksi jasa).</p></div>
+        </div>
+
+        <div class="dialog" style="border-left-color: #f59e0b; margin-top: 20px;">
+            <p><span class="guru">Guru:</span> “Nah, dari game singkat ini kita sudah melihat bahwa ekonomi ada di sekitar kita. Sekarang, mari kita lihat pertanyaan pemantik sebelum masuk materi inti!”</p>
+        </div>
+        <p><strong>Petunjuk:</strong> Guru menampilkan slide, memandu game, memberikan apresiasi, lalu bertransisi ke bagian apersepsi.</p>
+    </div>
+
+    <!-- ======================= B. APERSEPSI & PEMANTIK ======================= -->
+    <h2><span class="icon">💡</span> B. Apersepsi & Pertanyaan Pemantik</h2>
+    <div class="card">
+        <h3>Pertanyaan Pemantik (PID – tampilkan satu per satu)</h3>
+        <div class="grid-2">
+            <div class="info-box">
+                <h5>🔹 Akuntansi</h5>
+                <p>“Jika kalian membuka usaha jasa les privat, transaksi apa saja yang akan kalian catat?”</p>
+            </div>
+            <div class="info-box">
+                <h5>🔹 Badan Usaha</h5>
+                <p>“Mengapa ada perusahaan berbentuk PT, CV, dan koperasi? Apa bedanya?”</p>
+            </div>
+            <div class="info-box">
+                <h5>🔹 Manajemen</h5>
+                <p>“Bagaimana kalian mengatur uang jajan agar cukup sampai akhir minggu?”</p>
+            </div>
+            <div class="info-box">
+                <h5>🔹 Pajak</h5>
+                <p>“Siapa yang pernah melihat STNK atau PBB? Mengapa kita harus membayar pajak?”</p>
+            </div>
+        </div>
+        <div class="dialog">
+            <p><span class="guru">Guru:</span> “Coba tuliskan jawaban kalian di buku selama 2 menit, lalu kita bahas bersama!”</p>
+            <p><span class="siswa">Siswa:</span> (menulis dan berdiskusi dengan teman sebangku)</p>
+            <p><span class="guru">Guru:</span> “Bagus! Sekarang mari kita review materi secara ringkas, lalu kita akan bermain kuis dan tantangan kelompok.”</p>
+        </div>
+        <p><span class="pid">PID</span> Tampilkan pertanyaan pemantik satu per satu, beri waktu siswa berpikir.</p>
+    </div>
+
+    <!-- ======================= C. REVIEW MATERI ======================= -->
+    <h2><span class="icon">📚</span> C. Review Materi Ringkas & Sistematis</h2>
+    <div class="card">
+        <h3>1. Akuntansi Perusahaan Jasa</h3>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Konsep</th><th>Penjelasan</th><th>Contoh</th></tr>
+                <tr><td>Persamaan Dasar Akuntansi</td><td>Aset = Liabilitas + Ekuitas</td><td>Kas + Piutang = Utang + Modal</td></tr>
+                <tr><td>Analisis Transaksi</td><td>Menentukan akun yang terpengaruh (debit/kredit)</td><td>Menerima pendapatan jasa → Kas (D), Pendapatan (K)</td></tr>
+                <tr><td>Jurnal Umum</td><td>Mencatat transaksi secara kronologis</td><td>Tanggal, akun, ref, debit, kredit</td></tr>
+            </table>
+        </div>
+
+        <h3>2. Akuntansi Perusahaan Dagang</h3>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Konsep</th><th>Penjelasan</th><th>Contoh</th></tr>
+                <tr><td>Pembelian & Penjualan</td><td>Menggunakan akun Persediaan Barang Dagang</td><td>Pembelian kredit → Persediaan (D), Utang (K)</td></tr>
+                <tr><td>HPP</td><td>Harga Pokok Penjualan = Persediaan awal + Pembelian – Persediaan akhir</td><td>HPP = 10jt + 20jt – 8jt = 22jt</td></tr>
+                <tr><td>Laba Kotor</td><td>Penjualan bersih – HPP</td><td>30jt – 22jt = 8jt</td></tr>
+            </table>
+        </div>
+
+        <h3>3. Badan Usaha</h3>
+        <div class="infographic">
+            <div class="info-box"><h5>Perusahaan Perseorangan</h5><p>Dimiliki 1 orang, tanggung jawab tak terbatas.</p></div>
+            <div class="info-box"><h5>CV</h5><p>Persekutuan komanditer, ada sekutu aktif & pasif.</p></div>
+            <div class="info-box"><h5>PT</h5><p>Badan hukum, saham dimiliki pemegang saham.</p></div>
+            <div class="info-box"><h5>Koperasi</h5><p>Berdasarkan asas kekeluargaan, anggota sebagai pemilik.</p></div>
+        </div>
+
+        <h3>4. Manajemen</h3>
+        <ul>
+            <li><strong>Fungsi:</strong> Perencanaan, Pengorganisasian, Pelaksanaan, Pengawasan (POAC).</li>
+            <li><strong>Bidang:</strong> Produksi, Pemasaran, Keuangan, SDM.</li>
+            <li><strong>Contoh:</strong> Manajer mengatur jadwal produksi agar efisien.</li>
+        </ul>
+
+        <h3>5. Pajak Penghasilan (PPh)</h3>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Tarif PPh 21 (Orang Pribadi)</th><th>Penghasilan Kena Pajak (PKP)</th></tr>
+                <tr><td>5%</td><td>0 – 60 juta</td></tr>
+                <tr><td>15%</td><td>60 – 250 juta</td></tr>
+                <tr><td>25%</td><td>250 – 500 juta</td></tr>
+                <tr><td>30%</td><td>500 juta – 5 miliar</td></tr>
+                <tr><td>35%</td><td>&gt; 5 miliar</td></tr>
+            </table>
+        </div>
+        <p><strong>Contoh:</strong> PKP Rp 100 juta → PPh = 5% × 60jt + 15% × 40jt = 3jt + 6jt = Rp 9 juta.</p>
+
+        <h3>6. Pajak Bumi dan Bangunan (PBB)</h3>
+        <ul>
+            <li><strong>NJOP:</strong> Nilai Jual Objek Pajak.</li>
+            <li><strong>Rumus:</strong> PBB = Tarif × (NJOP – NJOPTKP)</li>
+            <li><strong>Tarif:</strong> Maksimal 0,5%.</li>
+            <li><strong>Contoh:</strong> NJOP Rp 500jt, NJOPTKP Rp 10jt → PBB = 0,5% × 490jt = Rp 2,45 juta.</li>
+        </ul>
+        <p><span class="pid">PID</span> Tampilkan ringkasan materi dalam bentuk infografis/tabel.</p>
+    </div>
+
+    <!-- ======================= D. AKTIVITAS INTERAKTIF ======================= -->
+    <h2><span class="icon">🖥️</span> D. Aktivitas Interaktif Menggunakan PID</h2>
+    <div class="card">
+        <h3>Aktivitas 1: “Tebak Akun” (Akuntansi Jasa & Dagang)</h3>
+        <p><span class="pid">PID</span> Tampilkan transaksi satu per satu. Siswa menjawab secara lisan/angkat tangan.</p>
+        <div class="interactive-area">
+            <p><strong>Transaksi 1:</strong> “Menerima uang tunai dari pelanggan atas jasa servis Rp 500.000.”</p>
+            <p><span class="guru">Guru:</span> “Akun apa yang terpengaruh?”</p>
+            <p><span class="siswa">Siswa:</span> “Kas bertambah (debit), Pendapatan Jasa bertambah (kredit)!”</p>
+            <p><strong>Transaksi 2:</strong> “Membeli barang dagang secara kredit Rp 2.000.000.”</p>
+            <p><span class="siswa">Siswa:</span> “Persediaan Barang Dagang (D), Utang Usaha (K)!”</p>
+        </div>
+
+        <h3>Aktivitas 2: “Pajak Cepat” (PPh & PBB)</h3>
+        <p><span class="pid">PID</span> Tampilkan soal hitung cepat. Siswa menggunakan kertas/coretan.</p>
+        <div class="interactive-area">
+            <p><strong>Soal PPh:</strong> “Pak Budi memiliki PKP Rp 80 juta. Hitung PPh terutang!”</p>
+            <p><em>Jawab:</em> 5% × 60jt + 15% × 20jt = 3jt + 3jt = <strong>Rp 6 juta</strong>.</p>
+            <p><strong>Soal PBB:</strong> “NJOP tanah Rp 300jt, bangunan Rp 200jt, NJOPTKP Rp 10jt. Hitung PBB (tarif 0,5%)!”</p>
+            <p><em>Jawab:</em> NJOP total 500jt – 10jt = 490jt. PBB = 0,5% × 490jt = <strong>Rp 2,45 juta</strong>.</p>
+        </div>
+        <p><span class="guru">Guru:</span> “Yang menjawab benar, angkat tangan! Kita beri tepuk tangan.”</p>
+    </div>
+
+    <!-- ======================= E. STUDI KASUS KONTEKSTUAL ======================= -->
+    <h2><span class="icon">🧠</span> E. Studi Kasus Kontekstual</h2>
+    <div class="card">
+        <div class="grid-2">
+            <div class="info-box" style="border-color:#f59e0b;">
+                <h5>Kasus 1: Perusahaan Jasa</h5>
+                <p>“Salon ‘Cantik’ menerima pendapatan jasa Rp 3.000.000, membayar gaji karyawan Rp 1.000.000, dan membayar sewa Rp 500.000. Buat jurnal umum dan hitung laba bersih!”</p>
+                <p class="small-note"><span class="tag tag-c4">C4</span> Analisis transaksi & laba.</p>
+            </div>
+            <div class="info-box" style="border-color:#10b981;">
+                <h5>Kasus 2: Pajak</h5>
+                <p>“Bu Rina memiliki tanah dan bangunan dengan NJOP Rp 800jt. NJOPTKP Rp 10jt. Hitung PBB terutang (tarif 0,5%). Jika Bu Rina lupa membayar, apa dampaknya?”</p>
+                <p class="small-note"><span class="tag tag-c5">C5</span> Evaluasi dampak.</p>
+            </div>
+        </div>
+        <div class="dialog">
+            <p><span class="guru">Guru:</span> “Diskusikan dengan kelompokmu selama 10 menit, lalu presentasikan hasilnya!”</p>
+            <p><span class="siswa">Siswa:</span> (berdiskusi, menghitung, dan menulis jawaban)</p>
+            <p><span class="guru">Guru (berkeliling):</span> “Bagus, pastikan jurnal debit-kredit seimbang!”</p>
+        </div>
+    </div>
+
+    <!-- ======================= F. KUIS INTERAKTIF 40 SOAL ======================= -->
+    <h2><span class="icon">⚡</span> F. Kuis Interaktif – 40 Soal (AAS Ganjil)</h2>
+    <div class="quiz-section">
+        <!-- ===== INTRO SCREEN KUIS ===== -->
+        <div class="quiz-intro" id="quizIntro">
+            <div class="mascot">🦉</div>
+            <h3>Misi: Taklukkan 40 Soal Ekonomi!</h3>
+            <p>Kamu akan berhadapan dengan 40 soal dari 6 materi: Akuntansi Jasa, Akuntansi Dagang, Badan Usaha, Manajemen, PPh, dan PBB.</p>
+            <div class="rules">
+                <ul>
+                    <li>✅ Pilih satu jawaban A–E. Jawaban <strong>langsung dinilai</strong>.</li>
+                    <li>💡 Setiap jawaban dilengkapi <strong>pembahasan singkat</strong>.</li>
+                    <li>🎯 Skor bertambah +1 untuk setiap jawaban benar.</li>
+                    <li>🏁 Di akhir, klik <em>“Tampilkan Rekap”</em> untuk melihat nilai dan pesan motivasi.</li>
+                </ul>
+            </div>
+            <div class="countdown-big" id="countdownBig">
+                <span class="num">3</span>
+            </div>
+            <button class="start-btn" id="startQuizBtn" onclick="startQuiz()" disabled>⏳ Bersiap…</button>
+        </div>
+
+        <div class="quiz-header">
+            <h3>🎮 Kuis Ekonomi Kelas XII</h3>
+            <div class="score-panel">
+                Skor: <span id="scoreDisplay">0</span> / 40
+            </div>
+        </div>
+
+        <div class="progress-bar-wrap">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <p style="margin-bottom:20px; color:#475569;">
+            <strong>Petunjuk:</strong> Pilih satu jawaban yang paling tepat pada setiap soal. Jawaban langsung dinilai, dan pembahasan akan muncul. Klik <em>“Cek Semua Jawaban”</em> di akhir untuk melihat rekap.
+        </p>
+
+        <div class="quiz-grid" id="quizGrid">
+            <!-- Soal akan di-generate oleh JavaScript -->
+        </div>
+
+        <div class="quiz-actions">
+            <button class="btn btn-primary" id="checkAllBtn" onclick="checkAllAnswers()">✅ Cek Semua Jawaban</button>
+            <button class="btn btn-outline" id="resetBtn" onclick="resetQuiz()">🔄 Ulangi Kuis</button>
+            <button class="btn btn-success" id="showSummaryBtn" onclick="showSummary()">📊 Tampilkan Rekap</button>
+        </div>
+
+        <div class="result-banner" id="resultBanner">
+            <h4>🎉 Hasil Kuis Kamu</h4>
+            <div class="big-score" id="finalScore">0</div>
+            <p id="finalMessage">Terus belajar, ya!</p>
+        </div>
+    </div>
+
+    <!-- ======================= G. TANTANGAN KELOMPOK ======================= -->
+    <h2><span class="icon">🏆</span> G. Tantangan Kelompok (Team Challenge)</h2>
+    <div class="challenge-box">
+        <h3>🎮 “Ekonomi Cerdas”</h3>
+        <p>Bagi kelas menjadi 4 kelompok. Setiap kelompok mendapat kartu tantangan berisi:</p>
+        <div class="grid-2">
+            <div class="card-inner">
+                <h4>Kartu 1 – Akuntansi</h4>
+                <p>“Buatlah jurnal umum dari 3 transaksi berikut: (1) Setoran modal Rp 10jt, (2) Membeli perlengkapan Rp 2jt tunai, (3) Menerima pendapatan Rp 3jt.”</p>
+            </div>
+            <div class="card-inner">
+                <h4>Kartu 2 – Pajak</h4>
+                <p>“Hitung PPh dan PBB dari data yang diberikan. Presentasikan hasilnya di depan kelas!”</p>
+            </div>
+            <div class="card-inner">
+                <h4>Kartu 3 – Badan Usaha</h4>
+                <p>“Bandingkan PT dan Koperasi dari segi kepemilikan, tanggung jawab, dan tujuan. Berikan contoh nyata!”</p>
+            </div>
+            <div class="card-inner">
+                <h4>Kartu 4 – Manajemen</h4>
+                <p>“Rancang rencana sederhana untuk kegiatan class meeting dengan fungsi manajemen POAC!”</p>
+            </div>
+        </div>
+        <p><strong>Aturan:</strong> Waktu 15 menit. Kelompok terbaik mendapat reward. Guru menjadi moderator dan memberikan umpan balik.</p>
+        <p><span class="pid">PID</span> Tampilkan timer 15 menit dan kartu tantangan.</p>
+    </div>
+
+    <!-- ======================= H. REFLEKSI ======================= -->
+    <h2><span class="icon">🪞</span> H. Refleksi & Penguatan Konsep</h2>
+    <div class="reflection">
+        <h3>Refleksi Pembelajaran</h3>
+        <div class="dialog">
+            <p><span class="guru">Guru:</span> “Apa hal baru yang kalian pelajari hari ini?”</p>
+            <p><span class="siswa">Siswa:</span> “Saya jadi paham cara membuat jurnal dan menghitung pajak!”</p>
+            <p><span class="guru">Guru:</span> “Apa bagian yang masih sulit?”</p>
+            <p><span class="siswa">Siswa:</span> “Membedakan debit-kredit, Bu/Pak.”</p>
+            <p><span class="guru">Guru:</span> “Baik, kita akan latihan lagi. Ingat, debit = kiri, kredit = kanan. Untuk pajak, selalu perhatikan tarif berlapis!”</p>
+        </div>
+        <h4>Penguatan Konsep Penting:</h4>
+        <ul>
+            <li><strong>Akuntansi:</strong> Pastikan persamaan dasar akuntansi selalu seimbang.</li>
+            <li><strong>Perusahaan Dagang:</strong> HPP = Persediaan awal + Pembelian – Persediaan akhir.</li>
+            <li><strong>Badan Usaha:</strong> Kenali ciri PT, CV, Firma, Koperasi.</li>
+            <li><strong>Manajemen:</strong> POAC (Planning, Organizing, Actuating, Controlling).</li>
+            <li><strong>PPh:</strong> Tarif progresif berlapis.</li>
+            <li><strong>PBB:</strong> NJOP – NJOPTKP, lalu dikali tarif 0,5%.</li>
+        </ul>
+        <p style="margin-top:16px;"><span class="pid">PID</span> Tampilkan slide rangkuman “Kunci Sukses AAS Ganjil”.</p>
+        <p class="small-note">Guru menutup dengan motivasi dan mengingatkan jadwal belajar.</p>
+    </div>
+
+    <div class="footer">
+        Rancangan Pembelajaran Interaktif – Ekonomi Kelas XII | Kuis 40 Soal | Siap digunakan dengan PID | © 2025
+    </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+    <span class="toast-emoji" id="toastEmoji">🎉</span>
+    <span id="toastMsg">Hebat!</span>
+</div>
+
+<script>
+    // ============================================================
+    // DATA 40 SOAL PILIHAN GANDA A–E
+    // ============================================================
+    const questions = [
+        // ---------- AKUNTANSI PERUSAHAAN JASA (1-7) ----------
+        {
+            materi: "Akuntansi Jasa", level: "C2",
+            q: "Persamaan dasar akuntansi yang benar adalah …",
+            opts: [
+                "Aset = Liabilitas – Ekuitas",
+                "Aset = Liabilitas + Ekuitas",
+                "Aset + Liabilitas = Ekuitas",
+                "Ekuitas = Aset + Liabilitas",
+                "Aset = Ekuitas – Liabilitas"
+            ],
+            ans: 1,
+            explain: "Persamaan dasar akuntansi: Aset = Liabilitas + Ekuitas."
+        },
+        {
+            materi: "Akuntansi Jasa", level: "C3",
+            q: "Menerima pendapatan jasa secara tunai Rp 1.000.000. Jurnal umumnya adalah …",
+            opts: [
+                "Kas (D) 1.000.000, Pendapatan Jasa (K) 1.000.000",
+                "Pendapatan Jasa (D) 1.000.000, Kas (K) 1.000.000",
+                "Piutang Usaha (D) 1.000.000, Pendapatan Jasa (K) 1.000.000",
+                "Kas (D) 1.000.000, Utang Usaha (K) 1.000.000",
+                "Kas (K) 1.000.000, Pendapatan Jasa (D) 1.000.000"
+            ],
+            ans: 0,
+            explain: "Kas bertambah (debit), Pendapatan Jasa bertambah (kredit)."
+        },
+        {
+            materi: "Akuntansi Jasa", level: "C3",
+            q: "Membayar beban listrik Rp 300.000 secara tunai. Pengaruhnya terhadap persamaan akuntansi adalah …",
+            opts: [
+                "Aset bertambah, Ekuitas bertambah",
+                "Aset berkurang, Ekuitas berkurang",
+                "Aset berkurang, Liabilitas bertambah",
+                "Liabilitas berkurang, Ekuitas bertambah",
+                "Tidak ada pengaruh terhadap persamaan"
+            ],
+            ans: 1,
+            explain: "Kas (aset) berkurang; beban mengurangi laba sehingga ekuitas berkurang."
+        },
+        {
+            materi: "Akuntansi Jasa", level: "C2",
+            q: "Akun yang bertambah di sisi kredit adalah …",
+            opts: ["Kas", "Perlengkapan", "Pendapatan Jasa", "Beban Gaji", "Piutang Usaha"],
+            ans: 2,
+            explain: "Pendapatan bertambah di kredit. Aset (kas, perlengkapan, piutang) bertambah di debit; beban bertambah di debit."
+        },
+        {
+            materi: "Akuntansi Jasa", level: "C3",
+            q: "Diselesaikan jasa servis Rp 2.000.000, baru dibayar Rp 1.200.000 sisanya kredit. Jurnal yang benar adalah …",
+            opts: [
+                "Kas (D) 2.000.000, Pendapatan Jasa (K) 2.000.000",
+                "Kas (D) 1.200.000, Piutang Usaha (D) 800.000, Pendapatan Jasa (K) 2.000.000",
+                "Piutang Usaha (D) 1.200.000, Kas (D) 800.000, Pendapatan Jasa (K) 2.000.000",
+                "Kas (D) 1.200.000, Pendapatan Jasa (K) 1.200.000",
+                "Kas (D) 800.000, Piutang Usaha (D) 1.200.000, Pendapatan Jasa (K) 2.000.000"
+            ],
+            ans: 1,
+            explain: "Kas diterima Rp 1.200.000 (debit), sisa Rp 800.000 menjadi Piutang Usaha (debit), Pendapatan Jasa Rp 2.000.000 (kredit)."
+        },
+        {
+            materi: "Akuntansi Jasa", level: "C4",
+            q: "Total aset Rp 50jt, total liabilitas Rp 15jt. Ekuitas pemilik adalah …",
+            opts: ["Rp 65 juta", "Rp 35 juta", "Rp 50 juta", "Rp 15 juta", "Rp 25 juta"],
+            ans: 1,
+            explain: "Ekuitas = Aset – Liabilitas = 50jt – 15jt = Rp 35 juta."
+        },
+        {
+            materi: "Akuntansi Jasa", level: "C4",
+            q: "Transaksi berikut yang TIDAK mempengaruhi ekuitas adalah …",
+            opts: [
+                "Menerima pendapatan jasa",
+                "Membayar beban gaji",
+                "Mengambil prive pemilik",
+                "Membeli perlengkapan secara tunai",
+                "Membayar utang usaha"
+            ],
+            ans: 3,
+            explain: "Membeli perlengkapan tunai hanya memindahkan aset (kas → perlengkapan), tidak mengubah ekuitas."
+        },
+
+        // ---------- AKUNTANSI PERUSAHAAN DAGANG (8-14) ----------
+        {
+            materi: "Akuntansi Dagang", level: "C2",
+            q: "Rumus Harga Pokok Penjualan (HPP) adalah …",
+            opts: [
+                "Persediaan awal + Pembelian – Persediaan akhir",
+                "Persediaan awal – Pembelian + Persediaan akhir",
+                "Penjualan – Laba kotor",
+                "Pembelian + Persediaan akhir",
+                "Penjualan bersih – Beban usaha"
+            ],
+            ans: 0,
+            explain: "HPP = Persediaan awal + Pembelian – Persediaan akhir."
+        },
+        {
+            materi: "Akuntansi Dagang", level: "C3",
+            q: "Penjualan bersih Rp 50jt, HPP Rp 30jt. Laba kotor adalah …",
+            opts: ["Rp 10 juta", "Rp 20 juta", "Rp 30 juta", "Rp 80 juta", "Rp 15 juta"],
+            ans: 1,
+            explain: "Laba kotor = Penjualan bersih – HPP = 50jt – 30jt = Rp 20 juta."
+        },
+        {
+            materi: "Akuntansi Dagang", level: "C3",
+            q: "Membeli barang dagang Rp 5.000.000 secara kredit. Jurnal yang benar adalah …",
+            opts: [
+                "Persediaan Barang Dagang (D) 5.000.000, Utang Usaha (K) 5.000.000",
+                "Utang Usaha (D) 5.000.000, Persediaan Barang Dagang (K) 5.000.000",
+                "Kas (D) 5.000.000, Penjualan (K) 5.000.000",
+                "Pembelian (D) 5.000.000, Kas (K) 5.000.000",
+                "Persediaan Barang Dagang (D) 5.000.000, Kas (K) 5.000.000"
+            ],
+            ans: 0,
+            explain: "Persediaan bertambah (debit), Utang Usaha bertambah (kredit)."
+        },
+        {
+            materi: "Akuntansi Dagang", level: "C3",
+            q: "Persediaan awal Rp 10jt, pembelian Rp 25jt, persediaan akhir Rp 8jt. HPP adalah …",
+            opts: ["Rp 27 juta", "Rp 23 juta", "Rp 25 juta", "Rp 43 juta", "Rp 17 juta"],
+            ans: 0,
+            explain: "HPP = 10jt + 25jt – 8jt = Rp 27 juta."
+        },
+        {
+            materi: "Akuntansi Dagang", level: "C4",
+            q: "Penjualan Rp 80jt, retur penjualan Rp 5jt, potongan penjualan Rp 3jt. Penjualan bersih adalah …",
+            opts: ["Rp 80 juta", "Rp 75 juta", "Rp 72 juta", "Rp 77 juta", "Rp 85 juta"],
+            ans: 2,
+            explain: "Penjualan bersih = 80jt – 5jt – 3jt = Rp 72 juta."
+        },
+        {
+            materi: "Akuntansi Dagang", level: "C4",
+            q: "Laba kotor Rp 40jt, beban usaha Rp 25jt. Laba usaha (laba bersih sebelum pajak) adalah …",
+            opts: ["Rp 65 juta", "Rp 15 juta", "Rp 25 juta", "Rp 40 juta", "Rp 5 juta"],
+            ans: 1,
+            explain: "Laba usaha = Laba kotor – Beban usaha = 40jt – 25jt = Rp 15 juta."
+        },
+        {
+            materi: "Akuntansi Dagang", level: "C5",
+            q: "Jika HPP naik tetapi penjualan tetap, dampak yang paling tepat adalah …",
+            opts: ["Laba kotor naik", "Laba kotor turun", "Laba kotor tetap", "Beban usaha naik", "Penjualan bersih naik"],
+            ans: 1,
+            explain: "Laba kotor = Penjualan – HPP. Jika HPP naik dan penjualan tetap, laba kotor turun."
+        },
+
+        // ---------- BADAN USAHA (15-20) ----------
+        {
+            materi: "Badan Usaha", level: "C2",
+            q: "Badan usaha yang anggotanya sebagai pemilik dan pengguna jasa adalah …",
+            opts: ["PT", "CV", "Koperasi", "Firma", "Perusahaan Perseorangan"],
+            ans: 2,
+            explain: "Koperasi berasaskan kekeluargaan; anggota adalah pemilik sekaligus pengguna jasa."
+        },
+        {
+            materi: "Badan Usaha", level: "C4",
+            q: "Ciri badan usaha yang modalnya terbagi atas saham dan tanggung jawab pemilik sebatas modal disetor adalah …",
+            opts: ["Firma", "CV", "PT", "Koperasi", "Perusahaan Perseorangan"],
+            ans: 2,
+            explain: "PT adalah badan hukum; pemegang saham bertanggung jawab terbatas pada modal yang disetor."
+        },
+        {
+            materi: "Badan Usaha", level: "C2",
+            q: "Sekutu yang bertanggung jawab penuh dan aktif mengelola CV disebut …",
+            opts: ["Sekutu komanditer", "Sekutu aktif (komplementer)", "Pemegang saham", "Anggota koperasi", "Direktur utama"],
+            ans: 1,
+            explain: "Sekutu aktif/komplementer bertanggung jawab penuh dan mengelola CV; sekutu pasif/komanditer hanya menyetor modal."
+        },
+        {
+            materi: "Badan Usaha", level: "C3",
+            q: "Badan usaha milik negara yang berbentuk perseroan terbatas dan sahamnya dimiliki negara serta publik adalah …",
+            opts: ["Perum", "Perjan", "Persero", "Koperasi", "Firma"],
+            ans: 2,
+            explain: "Persero adalah BUMN berbentuk PT yang sahamnya bisa dimiliki publik."
+        },
+        {
+            materi: "Badan Usaha", level: "C4",
+            q: "Kelebihan utama perusahaan perseorangan adalah …",
+            opts: ["Tanggung jawab terbatas", "Modal besar dan mudah", "Pengambilan keputusan cepat", "Badan hukum yang kuat", "Kelangsungan usaha terjamin"],
+            ans: 2,
+            explain: "Karena dimiliki satu orang, keputusan dapat diambil cepat; kelemahannya modal terbatas dan tanggung jawab tak terbatas."
+        },
+        {
+            materi: "Badan Usaha", level: "C5",
+            q: "Kelompok usaha yang paling tepat untuk menampung aspirasi ekonomi rakyat kecil dengan asas kekeluargaan adalah …",
+            opts: ["PT", "CV", "Firma", "Koperasi", "Perusahaan Perseorangan"],
+            ans: 3,
+            explain: "Koperasi berlandaskan asas kekeluargaan dan bertujuan mensejahterakan anggota."
+        },
+
+        // ---------- MANAJEMEN (21-26) ----------
+        {
+            materi: "Manajemen", level: "C2",
+            q: "Fungsi manajemen yang pertama adalah …",
+            opts: ["Pengorganisasian", "Perencanaan", "Pelaksanaan", "Pengawasan", "Penganggaran"],
+            ans: 1,
+            explain: "Perencanaan (planning) adalah fungsi pertama dalam POAC."
+        },
+        {
+            materi: "Manajemen", level: "C2",
+            q: "Manajer yang bertugas mengatur proses produksi agar efisien dan berkualitas adalah manajer bidang …",
+            opts: ["Pemasaran", "Keuangan", "SDM", "Produksi", "Umum"],
+            ans: 3,
+            explain: "Manajer produksi mengatur proses produksi."
+        },
+        {
+            materi: "Manajemen", level: "C3",
+            q: "Kegiatan menempatkan orang pada tugas yang sesuai dengan keahliannya merupakan fungsi …",
+            opts: ["Perencanaan", "Pengorganisasian", "Pelaksanaan", "Pengawasan", "Pengendalian"],
+            ans: 1,
+            explain: "Pengorganisasian (organizing) mencakup pembagian tugas dan penempatan SDM."
+        },
+        {
+            materi: "Manajemen", level: "C4",
+            q: "Manajer membandingkan realisasi dengan rencana dan mengambil tindakan koreksi. Ini fungsi …",
+            opts: ["Planning", "Organizing", "Actuating", "Controlling", "Staffing"],
+            ans: 3,
+            explain: "Controlling (pengawasan) membandingkan realisasi dengan standar dan melakukan koreksi."
+        },
+        {
+            materi: "Manajemen", level: "C2",
+            q: "Bidang manajemen yang mengurus perencanaan sumber dana dan penggunaan dana adalah …",
+            opts: ["Pemasaran", "Produksi", "Keuangan", "SDM", "Administrasi"],
+            ans: 2,
+            explain: "Manajemen keuangan mengurus perencanaan, penggunaan, dan pengendalian dana."
+        },
+        {
+            materi: "Manajemen", level: "C5",
+            q: "Prinsip manajemen yang menekankan pembagian kerja agar efisiensi tercapai adalah …",
+            opts: ["Division of work", "Centralization", "Scalar chain", "Esprit de corps", "Initiative"],
+            ans: 0,
+            explain: "Division of work (pembagian kerja) meningkatkan efisiensi dan spesialisasi."
+        },
+
+        // ---------- PPh (27-33) ----------
+        {
+            materi: "PPh", level: "C3",
+            q: "PKP Rp 70 juta. PPh terutang berdasarkan tarif progresif adalah …",
+            opts: ["Rp 3 juta", "Rp 4,5 juta", "Rp 6 juta", "Rp 7 juta", "Rp 10,5 juta"],
+            ans: 1,
+            explain: "5% × 60jt = 3jt; 15% × 10jt = 1,5jt; total Rp 4,5 juta."
+        },
+        {
+            materi: "PPh", level: "C2",
+            q: "Tarif PPh 21 untuk PKP di atas Rp 60 juta sampai Rp 250 juta adalah …",
+            opts: ["5%", "15%", "25%", "30%", "35%"],
+            ans: 1,
+            explain: "Lapisan kedua tarif PPh 21 adalah 15%."
+        },
+        {
+            materi: "PPh", level: "C3",
+            q: "PKP Rp 300 juta. PPh terutang adalah …",
+            opts: ["Rp 15 juta", "Rp 30 juta", "Rp 39 juta", "Rp 44 juta", "Rp 60 juta"],
+            ans: 3,
+            explain: "5%×60jt = 3jt; 15%×190jt = 28,5jt; 25%×50jt = 12,5jt; total = 3 + 28,5 + 12,5 = Rp 44 juta."
+        },
+        {
+            materi: "PPh", level: "C2",
+            q: "PPh Pasal 21 dikenakan atas penghasilan …",
+            opts: ["Badan usaha", "Orang pribadi", "Bumi dan bangunan", "Ekspor barang", "Dividen saham"],
+            ans: 1,
+            explain: "PPh Pasal 21 adalah pajak atas penghasilan orang pribadi."
+        },
+        {
+            materi: "PPh", level: "C4",
+            q: "PKP Rp 100 juta. PPh terutang adalah …",
+            opts: ["Rp 5 juta", "Rp 9 juta", "Rp 15 juta", "Rp 10 juta", "Rp 6 juta"],
+            ans: 1,
+            explain: "5%×60jt = 3jt; 15%×40jt = 6jt; total Rp 9 juta."
+        },
+        {
+            materi: "PPh", level: "C4",
+            q: "PTKP (Penghasilan Tidak Kena Pajak) bagi wajib pajak orang pribadi yang belum menikah adalah …",
+            opts: ["Rp 54 juta", "Rp 58,5 juta", "Rp 63 juta", "Rp 67,5 juta", "Rp 72 juta"],
+            ans: 0,
+            explain: "PTKP dasar untuk wajib pajak orang pribadi adalah Rp 54 juta per tahun."
+        },
+        {
+            materi: "PPh", level: "C5",
+            q: "Wajib pajak memiliki PKP Rp 500 juta. PPh terutang adalah …",
+            opts: ["Rp 25 juta", "Rp 45 juta", "Rp 75 juta", "Rp 94 juta", "Rp 125 juta"],
+            ans: 3,
+            explain: "5%×60jt = 3jt; 15%×190jt = 28,5jt; 25%×250jt = 62,5jt; total = 3 + 28,5 + 62,5 = Rp 94 juta."
+        },
+
+        // ---------- PBB (34-40) ----------
+        {
+            materi: "PBB", level: "C3",
+            q: "NJOP Rp 400jt, NJOPTKP Rp 10jt, tarif 0,5%. PBB terutang adalah …",
+            opts: ["Rp 1,95 juta", "Rp 2,00 juta", "Rp 2,05 juta", "Rp 2,10 juta", "Rp 2,50 juta"],
+            ans: 0,
+            explain: "(400jt – 10jt) × 0,5% = 390jt × 0,005 = Rp 1,95 juta."
+        },
+        {
+            materi: "PBB", level: "C2",
+            q: "NJOPTKP adalah …",
+            opts: [
+                "Nilai Jual Objek Pajak",
+                "Nilai Jual Objek Pajak Tidak Kena Pajak",
+                "Nilai Jual Tanah dan Bangunan",
+                "Nilai Objek Pajak Terutang",
+                "Nilai Jual Objek Pajak Kena Pajak"
+            ],
+            ans: 1,
+            explain: "NJOPTKP = Nilai Jual Objek Pajak Tidak Kena Pajak, batas nilai yang tidak dikenakan PBB."
+        },
+        {
+            materi: "PBB", level: "C3",
+            q: "NJOP tanah Rp 300jt, bangunan Rp 200jt, NJOPTKP Rp 10jt, tarif 0,5%. PBB terutang adalah …",
+            opts: ["Rp 2,00 juta", "Rp 2,45 juta", "Rp 2,50 juta", "Rp 2,95 juta", "Rp 3,00 juta"],
+            ans: 1,
+            explain: "NJOP total = 300jt + 200jt = 500jt; 500jt – 10jt = 490jt; 0,5% × 490jt = Rp 2,45 juta."
+        },
+        {
+            materi: "PBB", level: "C2",
+            q: "Tarif maksimal PBB untuk sektor perdesaan dan perkotaan adalah …",
+            opts: ["0,1%", "0,3%", "0,5%", "1%", "2%"],
+            ans: 2,
+            explain: "Tarif PBB-P2 maksimal 0,5%."
+        },
+        {
+            materi: "PBB", level: "C4",
+            q: "NJOP Rp 1 miliar, NJOPTKP Rp 10jt. PBB terutang (tarif 0,5%) adalah …",
+            opts: ["Rp 4,95 juta", "Rp 5,00 juta", "Rp 5,05 juta", "Rp 5,50 juta", "Rp 4,50 juta"],
+            ans: 0,
+            explain: "(1.000jt – 10jt) × 0,5% = 990jt × 0,005 = Rp 4,95 juta."
+        },
+        {
+            materi: "PBB", level: "C5",
+            q: "Dampak jika wajib pajak tidak membayar PBB adalah …",
+            opts: ["Tidak ada sanksi", "Mendapat hadiah", "Dikenakan sanksi administrasi/denda", "NJOP otomatis turun", "PBB dihapuskan"],
+            ans: 2,
+            explain: "Keterlambatan/tidak membayar PBB dikenakan sanksi administrasi berupa denda."
+        },
+        {
+            materi: "PBB", level: "C4",
+            q: "Objek PBB adalah …",
+            opts: ["Penghasilan orang pribadi", "Bumi dan/atau bangunan", "Kendaraan bermotor", "Barang mewah", "Dividen saham"],
+            ans: 1,
+            explain: "PBB dikenakan atas bumi (tanah) dan/atau bangunan."
+        }
+    ];
+
+    // ============================================================
+    // STATE & ELEMEN
+    // ============================================================
+    let userAnswers = new Array(questions.length).fill(null);
+    let answered = new Array(questions.length).fill(false);
+    let currentScore = 0;
+    let quizStarted = false;
+
+    const quizGrid = document.getElementById('quizGrid');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    const progressBar = document.getElementById('progressBar');
+    const resultBanner = document.getElementById('resultBanner');
+    const finalScore = document.getElementById('finalScore');
+    const finalMessage = document.getElementById('finalMessage');
+    const quizIntro = document.getElementById('quizIntro');
+    const startQuizBtn = document.getElementById('startQuizBtn');
+    const countdownBig = document.getElementById('countdownBig');
+
+    const labels = ['A', 'B', 'C', 'D', 'E'];
+
+    // ============================================================
+    // INTRO SCREEN: COUNTDOWN 3-2-1
+    // ============================================================
+    function runCountdown() {
+        let count = 3;
+        countdownBig.innerHTML = `<span class="num">${count}</span>`;
+        const interval = setInterval(() => {
+            count--;
+            if (count > 0) {
+                countdownBig.innerHTML = `<span class="num">${count}</span>`;
+            } else {
+                clearInterval(interval);
+                countdownBig.innerHTML = `<span class="num">🚀</span>`;
+                startQuizBtn.disabled = false;
+                startQuizBtn.textContent = '🚀 Mulai Kuis Sekarang!';
+            }
+        }, 1000);
+    }
+
+    function startQuiz() {
+        quizIntro.classList.add('hidden');
+        quizStarted = true;
+        // Scroll ke grid kuis
+        quizGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showToast('🚀', 'Selamat berjuang! Baca soal dengan teliti.');
+    }
+
+    // ============================================================
+    // RENDER KUIS
+    // ============================================================
+    function renderQuiz() {
+        quizGrid.innerHTML = '';
+        questions.forEach((q, idx) => {
+            const card = document.createElement('div');
+            card.className = 'q-card';
+            card.id = `qcard-${idx}`;
+
+            const header = document.createElement('div');
+            header.className = 'q-number';
+            header.innerHTML = `<span>Soal ${idx + 1} dari ${questions.length}</span><span class="tag tag-${q.level.toLowerCase()}">${q.level}</span>`;
+
+            const qText = document.createElement('div');
+            qText.className = 'q-text';
+            qText.textContent = `[${q.materi}] ${q.q}`;
+
+            const optionsDiv = document.createElement('div');
+            optionsDiv.className = 'options';
+
+            q.opts.forEach((opt, oIdx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.dataset.qIdx = idx;
+                btn.dataset.oIdx = oIdx;
+                btn.innerHTML = `<span class="opt-label">${labels[oIdx]}.</span> <span>${opt}</span>`;
+                btn.onclick = () => selectOption(idx, oIdx, btn);
+                optionsDiv.appendChild(btn);
+            });
+
+            const feedback = document.createElement('div');
+            feedback.className = 'feedback';
+            feedback.id = `feedback-${idx}`;
+
+            card.appendChild(header);
+            card.appendChild(qText);
+            card.appendChild(optionsDiv);
+            card.appendChild(feedback);
+            quizGrid.appendChild(card);
+        });
+    }
+
+    // ============================================================
+    // JAWABAN INTERAKTIF DENGAN FEEDBACK HIDUP
+    // ============================================================
+    function selectOption(qIdx, oIdx, btn) {
+        if (answered[qIdx]) return;
+
+        const card = document.getElementById(`qcard-${qIdx}`);
+        card.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        userAnswers[qIdx] = oIdx;
+        answered[qIdx] = true;
+        card.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+
+        const correctIdx = questions[qIdx].ans;
+        const feedback = document.getElementById(`feedback-${qIdx}`);
+        const isCorrect = (oIdx === correctIdx);
+
+        // Tandai benar/salah
+        card.querySelectorAll('.option-btn').forEach((b, i) => {
+            if (i === correctIdx) b.classList.add('correct');
+            if (i === oIdx && !isCorrect) b.classList.add('wrong');
+        });
+
+        // Bangun feedback interaktif
+        const emoji = isCorrect
+            ? ['🎉', '🌟', '💪', '🔥', '👏'][Math.floor(Math.random() * 5)]
+            : ['💡', '🔍', '📚', '🤔', '📝'][Math.floor(Math.random() * 5)];
+        const headerText = isCorrect ? 'Benar sekali!' : 'Belum tepat, tapi jangan menyerah!';
+        const badge = isCorrect ? 'SKOR +1' : 'SKOR +0';
+        const nextHint = isCorrect
+            ? 'Lanjut ke soal berikutnya! 🚀'
+            : `Jawaban yang tepat: <strong>${labels[correctIdx]}</strong>. Baca pembahasannya, ya.`;
+
+        feedback.className = `feedback show ${isCorrect ? 'ok' : 'no'}`;
+        feedback.innerHTML = `
+            <div class="feedback-inner">
+                <div class="fb-header">
+                    <span class="fb-emoji">${emoji}</span>
+                    <span>${headerText}</span>
+                </div>
+                <div class="fb-explain">${questions[qIdx].explain}</div>
+                <div class="fb-badge">${badge}</div>
+                <div class="next-hint">${nextHint}</div>
+            </div>
+        `;
+
+        // Toast + skor
+        if (isCorrect) {
+            currentScore++;
+            scoreDisplay.textContent = currentScore;
+            showToast(emoji, `+1 poin! Total skor: ${currentScore}`);
+        } else {
+            showToast(emoji, 'Tenang, pelajari pembahasannya!');
+        }
+
+        updateProgress();
+    }
+
+    function updateProgress() {
+        const count = answered.filter(a => a).length;
+        const pct = (count / questions.length) * 100;
+        progressBar.style.width = pct + '%';
+        if (count === questions.length) {
+            showToast('🏁', 'Semua soal terjawab! Klik "Tampilkan Rekap" untuk melihat hasil.');
+        }
+    }
+
+    // ============================================================
+    // CEK SEMUA, REKAP, RESET
+    // ============================================================
+    function checkAllAnswers() {
+        if (!quizStarted) {
+            showToast('⏳', 'Klik "Mulai Kuis" dulu, ya!');
+            return;
+        }
+        let unanswered = 0;
+        questions.forEach((q, idx) => {
+            if (!answered[idx]) {
+                unanswered++;
+                const card = document.getElementById(`qcard-${idx}`);
+                card.querySelectorAll('.option-btn').forEach(b => {
+                    if (parseInt(b.dataset.oIdx) === q.ans) b.classList.add('correct');
+                    b.disabled = true;
+                });
+                const feedback = document.getElementById(`feedback-${idx}`);
+                feedback.className = 'feedback show no';
+                feedback.innerHTML = `
+                    <div class="feedback-inner">
+                        <div class="fb-header">
+                            <span class="fb-emoji">⚠️</span>
+                            <span>Belum dijawab</span>
+                        </div>
+                        <div class="fb-explain">Jawaban benar: <strong>${labels[q.ans]}</strong>. ${q.explain}</div>
+                        <div class="fb-badge">SKOR +0</div>
+                    </div>
+                `;
+                answered[idx] = true;
+            }
+        });
+        updateProgress();
+        showToast(unanswered > 0 ? '⚠️' : '✅',
+            unanswered > 0 ? `${unanswered} soal belum dijawab. Semua kunci sudah ditampilkan.` : 'Semua soal sudah dijawab. Klik "Tampilkan Rekap".');
+    }
+
+    function showSummary() {
+        const total = questions.length;
+        const correct = userAnswers.reduce((acc, ans, idx) => acc + (ans === questions[idx].ans ? 1 : 0), 0);
+        const pct = Math.round((correct / total) * 100);
+
+        finalScore.textContent = `${correct} / ${total}`;
+        let msg = '';
+        let emoji = '';
+        if (pct >= 90) { msg = 'Luar biasa! Kamu siap menghadapi AAS Ganjil!'; emoji = '🏆'; }
+        else if (pct >= 75) { msg = 'Bagus! Sedikit lagi menuju sempurna.'; emoji = '💪'; }
+        else if (pct >= 60) { msg = 'Cukup baik. Pelajari kembali materi yang masih lemah.'; emoji = '📚'; }
+        else { msg = 'Jangan menyerah! Ayo ulangi kuis dan pelajari pembahasannya.'; emoji = '🔄'; }
+
+        finalMessage.textContent = `${emoji} ${msg} (Nilai: ${pct})`;
+        resultBanner.classList.add('show');
+        resultBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        showToast(emoji, `Skor akhir: ${correct}/${total} (Nilai ${pct})`);
+    }
+
+    function resetQuiz() {
+        userAnswers = new Array(questions.length).fill(null);
+        answered = new Array(questions.length).fill(false);
+        currentScore = 0;
+        scoreDisplay.textContent = '0';
+        progressBar.style.width = '0%';
+        resultBanner.classList.remove('show');
+        quizIntro.classList.remove('hidden');
+        startQuizBtn.disabled = true;
+        startQuizBtn.textContent = '⏳ Bersiap…';
+        quizStarted = false;
+        renderQuiz();
+        runCountdown();
+        showToast('🔄', 'Kuis direset. Siap main lagi!');
+        quizIntro.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // ============================================================
+    // TOAST NOTIFIKASI
+    // ============================================================
+    let toastTimeout = null;
+    function showToast(emoji, msg) {
+        const toast = document.getElementById('toast');
+        document.getElementById('toastEmoji').textContent = emoji;
+        document.getElementById('toastMsg').textContent = msg;
+        toast.classList.add('show');
+        if (toastTimeout) clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => toast.classList.remove('show'), 2600);
+    }
+
+    // ============================================================
+    // INISIALISASI
+    // ============================================================
+    renderQuiz();
+    runCountdown();
+</script>
+
+</body>
+</html>
